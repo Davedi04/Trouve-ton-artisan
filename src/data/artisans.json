@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "Artisan Bâtiment",
+      "specialty": "Maçonnerie",
+      "rating": 4.8,
+      "location": "Lyon"
+    },
+    {
+      "id": 2,
+      "name": "Artisan Bois",
+      "specialty": "Menuiserie",
+      "rating": 4.5,
+      "location": "Clermont-Ferrand"
+    }
+  ]
+  
