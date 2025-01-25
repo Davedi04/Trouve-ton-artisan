@@ -1,0 +1,14 @@
+/* src/styles/main.css */
+@import './variables.css';
+
+body {
+  font-family: var(--font-family-primary);
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-light-blue);
+  color: var(--color-dark-gray);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-dark-blue);
+}
