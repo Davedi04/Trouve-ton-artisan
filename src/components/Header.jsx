@@ -1,13 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
 import { Container, Row, Col, Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 
 function Header() {
+    const navigate = useNavigate();
+
     const handleSearchSubmit = (e) => {
         e.preventDefault();    
         const searchQuery = e.target.elements.searchInput.value;
-        console.log(searchQuery);
+        if (searchQuery.trim()) {
+            navigate(`/search?q=${searchQuery}`);
+        }
     };
 
     return (
@@ -28,7 +32,7 @@ function Header() {
                             aria-label='Search'
                             name='searchInput'
                             />
-                            <Button variant="outline-success">Rechercher</Button>
+                            <Button type="submit">Rechercher</Button>
                         </Form>
                     </Col>
                 </Row>

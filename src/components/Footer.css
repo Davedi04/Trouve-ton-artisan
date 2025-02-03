@@ -1,0 +1,53 @@
+footer {
+    background-color: #0074c7;
+    color: white;
+    padding-top: 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blanc {
+    color: white !important;
+    text-decoration: none;
+}
+
+.ligne {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: solid 2px;
+}
+
+footer a {
+    color: white; /* Couleur des liens */
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Souligne au survol */
+}
+
+footer .ligne {
+    border-top: 1px solid white; /* Ligne séparatrice */
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+footer .blanc {
+    font-size: 14px;
+}
+
+footer .blanc:hover {
+    color: #ffb800; /* Couleur au survol */
+}
+
+footer address h2 {
+    font-size: 1.5rem; /* Taille du titre de l'adresse */
+    font-weight: bold;
+}
+
+footer address p {
+    font-size: 1rem; /* Taille du texte de l'adresse */
+}
