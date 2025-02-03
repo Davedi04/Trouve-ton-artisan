@@ -1,17 +1,59 @@
 [
     {
       "id": 1,
-      "name": "Artisan Bâtiment",
+      "name": "Julien Peirrera",
       "specialty": "Maçonnerie",
       "rating": 4.8,
       "location": "Lyon"
     },
     {
       "id": 2,
-      "name": "Artisan Bois",
+      "name": "Paul Collin",
       "specialty": "Menuiserie",
       "rating": 4.5,
       "location": "Clermont-Ferrand"
+    },
+    {
+      "id": 3,
+      "name": "David Pierre",
+      "specialty": "Plombier",
+      "rating": 4.7,
+      "location": "Moulins"
+    },
+    {
+      "id": 4,
+      "name": "Amed Couli",
+      "specialty": "Peintre",
+      "rating": 4.6,
+      "location": "Saint-Etienne"
+    },
+    {
+      "id": 5,
+      "name": "Sophie Champs",
+      "specialty": "Boulanger",
+      "rating": 4.5,
+      "location": "Lyon"
+    },
+    {
+      "id": 6,
+      "name": "Amel Pitia",
+      "specialty": "Boucher",
+      "rating": 4.2,
+      "location": "Clermont-Ferrand"
+    },
+    {
+      "id": 7,
+      "name": "Luc Clair",
+      "specialty": "Coiffeur",
+      "rating": 4.5,
+      "location": "Roanne"
+    },
+    {
+      "id": 8,
+      "name": "Ethan Turik",
+      "specialty": "Ebeniste",
+      "rating": 4.1,
+      "location": "Le Puy"
     }
   ]
   
