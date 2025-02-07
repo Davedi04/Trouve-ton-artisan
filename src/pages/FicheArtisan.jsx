@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Card, Form, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faGlobe } from "@fortawesome/free-solid-svg-icons";
-import artisansData from "../data/artisans.json";
 
 const ArtisanDetail = () => {
   const { id } = useParams();
-  const artisan = artisansData.find((a) => a.id === parseInt(id));
+  const [artisans, setArtisans] = useState([]); // Stocke les artisans
+  const [artisan, setArtisan] = useState(null); // Stocke l'artisan spécifique
+
+  useEffect(() => {
+    fetch("/data/artisans.json") // Assure-toi que le fichier est bien dans public/data/
+      .then((response) => response.json())
+      .then((data) => {
+        setArtisans(data);
+        const foundArtisan = data.find((a) => a.id === parseInt(id));
+        setArtisan(foundArtisan || null);
+      })
+      .catch((error) => console.error("Erreur de chargement :", error));
+  }, [id]);
 
   const [formData, setFormData] = useState({
     nom: "",
@@ -23,13 +34,13 @@ const ArtisanDetail = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Message envoyé à ${artisan.nom} !`);
+    alert(`Message envoyé à ${artisan.name} !`);
   };
 
   return (
     <Container className="mt-4">
       <Card className="p-4 shadow">
-        <h2>{artisan.nom}</h2>
+        <h2>{artisan.name}</h2>
 
         <div className="mb-3">
           {[...Array(5)].map((_, i) => (
@@ -41,8 +52,8 @@ const ArtisanDetail = () => {
           ))}
         </div>
 
-        <p><strong>Spécialité :</strong> {artisan.specialite}</p>
-        <p><strong>Localisation :</strong> {artisan.localisation}</p>
+        <p><strong>Spécialité :</strong> {artisan.speciality}</p>
+        <p><strong>Localisation :</strong> {artisan.location}</p>
 
         <h3 className="mt-4">À propos</h3>
         <p>{artisan.description || "Aucune description disponible."}</p>
