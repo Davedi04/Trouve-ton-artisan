@@ -1,14 +1,16 @@
 /* Style home */
 .home-container {
+  background-color: #f1f8fc;
     padding: 2rem;
     text-align: center;
   }
   
   .how-to {
-    background: #f9f9f9;
+    background: #f1f8fc;
     padding: 2rem;
     border-radius: 8px;
     margin-bottom: 2rem;
+
   }
   
   .how-to h1 {
@@ -44,56 +46,22 @@
     border-radius: 50%;
   }
   
-  .top-artisans h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-  
-  .artisan-list {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .artisan-card {
-    background: white;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 200px;
-  }
-  
-  .artisan-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .stars {
-    font-size: 1.2rem;
-  }
-  
-  .star {
-    color: #ccc;
-  }
-  
-  .star.filled {
-    color: gold;
-  }
-
 /* Style ListeArtisan */
 .artisan-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  gap: 20px;
+  justify-content: center;
 }
 
 /* Style FicheArtisan */
 .artisan-card {
-  border: 1px solid #ccc;
-  padding: 16px;
-  margin: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
   border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .artisan-card h2 {
@@ -102,4 +70,22 @@
 
 .btn {
   margin-top: 10px;
+}
+
+.top-artisans h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.artisan-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stars {
+  font-size: 1.2rem;
+}
+
+.star.filled {
+  color: gold;
 }

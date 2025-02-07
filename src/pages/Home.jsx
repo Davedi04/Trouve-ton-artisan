@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import artisansData from "../data/artisans.json";
-import "./style.css"; // Fichier CSS pour le style
+import "./style.css";
 
 const Home = () => {
-  const topArtisans = artisansData.slice(0, 3);
+  const [artisans, setArtisans] = useState([]);
+
+  useEffect(() => {
+    // Prendre les 3 premiers artisans du JSON
+    const topArtisans = artisansData.slice(0, 3);
+    setArtisans(topArtisans);
+  }, []);
 
   return (
     <div className="home-container">
-      {/* Section "Comment trouver mon artisan ?" */}
+      {/* Section Comment trouver mon artisan ? */}
       <section className="how-to">
         <h1>Comment trouver mon artisan ?</h1>
         <div className="steps">
@@ -25,18 +31,18 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Section "Artisans du mois" */}
+      {/* Section Artisans du mois */}
       <section className="top-artisans">
         <h2>Artisans du mois</h2>
         <div className="artisan-list">
-          {topArtisans.map((artisan) => (
+          {artisans.map((artisan) => (
             <div className="artisan-card" key={artisan.id}>
-              <h3>{artisan.name}</h3>
-              <p><strong>Spécialité :</strong> {artisan.specialty}</p>
-              <p><strong>Localisation :</strong> {artisan.location}</p>
+              <h3>{artisan.nom}</h3>
+              <p><strong>Spécialité :</strong> {artisan.specialite}</p>
+              <p><strong>Localisation :</strong> {artisan.localisation}</p>
               <div className="stars">
                 {Array.from({ length: 5 }, (_, i) => (
-                  <span key={i} className={i < artisan.rating ? "star filled" : "star"}>
+                  <span key={i} className={i < artisan.note ? "star filled" : "star"}>
                     ★
                   </span>
                 ))}

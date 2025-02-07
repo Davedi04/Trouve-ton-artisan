@@ -23,7 +23,7 @@ function Footer() {
                 </Row>
                 <Row className="ligne justify-content-center">
                     <Col className='text-center'>
-                        <a className="blanc mx-2" href="*">Mentions légales</a>
+                        <a className="blanc mx-2" href="#">Mentions légales</a>
                         <a className="blanc mx-2" href="*">Données personnelles</a>
                         <a className="blanc mx-2" href="*">Accessibilité</a>
                         <a className="blanc mx-2" href="*">Politique des coockies</a>
