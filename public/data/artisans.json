@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "name": "Maison ABC",
+    "speciality": "Bâtiment",
+    "note": 4.8,
+    "location": "Lyon",
+    "description": "Expert en maçonnerie",
+    "site": "https://www.chaverot-maconnerie-montrottier.fr/"
+  },
+  {
+    "id": 2,
+    "name": "Boulangerie Patisserie Fudoret",
+    "speciality": "Alimentation",
+    "note": 4.5,
+    "location": "Clermont-Ferrand",
+    "description": "Expert en boulangerie et patisserie",
+    "site": "https://www.boulangerie-epicerie-furodet-auvergne.fr/"
+  },
+  {
+    "id": 3,
+    "name": "Tertio",
+    "speciality": "Services",
+    "note": 4.7,
+    "location": "Moulins",
+    "description": "Maintenance informatique",
+    "site": "https://www.tert.io/"
+  },
+  {
+    "id": 4,
+    "name": "Atelier du Copeau",
+    "speciality": "Fabrication",
+    "note": 4.0,
+    "location": "Saint-Etienne",
+    "description": "Fabricant de meubles et objets de décorations",
+    "site": "https://www.picton-atelierducopeau.com/"
+  },
+  {
+    "id": 5,
+    "name": "Attila",
+    "speciality": "Bâtiment",
+    "note": 4.1,
+    "location": "Vichy",
+    "description": "Expert en toiture",
+    "site": "https://www.attila.fr/nos-agences/attila-vichy"
+  },
+  {
+    "id": 6,
+    "name": "Les palets d'or",
+    "speciality": "Alimentation",
+    "note": 4.8,
+    "location": "Moulins",
+    "description": "Expert en chocolaterie",
+    "site": "https://lespaletsdor.com/"
+  },
+  {
+    "id": 7,
+    "name": "Tchip Coiffure",
+    "speciality": "Services",
+    "note": 4.2,
+    "location": "Roanne",
+    "description": "Salon de coiffure",
+    "site": "https://salons.tchip.fr/85051543567244/salon-coiffure-roanne"
+  },
+  {
+    "id": 8,
+    "name": "Atelier Louis",
+    "speciality": "Fabrication",
+    "note": 3.6,
+    "location": "Lyon",
+    "description": "Atelier de fabrication de bougies artisanales ",
+    "site": "https://www.atelierlouis.fr/?srsltid=AfmBOoo7wgsnpvKmKHOH5Lx67ONeRhYXrtcLR2FT2-nWLnNDlwZGT0o6"
+  }
+]
+  
