@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const ListeArtisans = () => {
-    const [artisans, setArtisans] = useState([]);
     const [filteredArtisans, setFilteredArtisans] = useState([]);
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
@@ -16,7 +15,6 @@ const ListeArtisans = () => {
         fetch("/data/artisans.json")
             .then((response) => response.json())
             .then((data) => {
-                setArtisans(data);
 
                 // Filtrer selon la catégorie ou la recherche
                 let filtered = data;
@@ -42,9 +40,9 @@ const ListeArtisans = () => {
 
     return (
         <Container className="mt-4">
-            <h2 className="mb-4">Liste des artisans</h2>
+            <h2 className="text-center mb-4">Liste des artisans</h2>
             <Row>
-                {filteredArtisans.map((artisan) => (
+                {filteredArtisans.map(artisan => (
                     <Col key={artisan.id} xs={12} sm={6} md={4} lg={3} className="mb-4">
                         <Card className="p-3 shadow-sm">
                             <Card.Body>

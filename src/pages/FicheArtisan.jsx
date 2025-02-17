@@ -6,14 +6,12 @@ import { faStar, faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const ArtisanDetail = () => {
   const { id } = useParams();
-  const [artisans, setArtisans] = useState([]); // Stocke les artisans
   const [artisan, setArtisan] = useState(null); // Stocke l'artisan spécifique
 
   useEffect(() => {
     fetch("/data/artisans.json") // Assure-toi que le fichier est bien dans public/data/
       .then((response) => response.json())
       .then((data) => {
-        setArtisans(data);
         const foundArtisan = data.find((a) => a.id === parseInt(id));
         setArtisan(foundArtisan || null);
       })
@@ -38,7 +36,7 @@ const ArtisanDetail = () => {
   };
 
   return (
-    <Container className="mt-4">
+    <Container className="mt-4 mb-4">
       <Card className="p-4 shadow">
         <h2>{artisan.name}</h2>
 

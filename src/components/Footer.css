@@ -1,5 +1,5 @@
 footer {
-    background-color: #0074c7;
+    background-color: #384050;
     color: white;
     padding-top: 50px;
 }
@@ -39,10 +39,6 @@ footer .blanc {
     font-size: 14px;
 }
 
-footer .blanc:hover {
-    color: #ffb800; /* Couleur au survol */
-}
-
 footer address h2 {
     font-size: 1.5rem; /* Taille du titre de l'adresse */
     font-weight: bold;
@@ -50,4 +46,11 @@ footer address h2 {
 
 footer address p {
     font-size: 1rem; /* Taille du texte de l'adresse */
+}
+
+.cadre1 {
+    width: 150px;
+    height: 150px;
+    background-color: #f1f8fc;
+    border-radius: 30px;
 }
