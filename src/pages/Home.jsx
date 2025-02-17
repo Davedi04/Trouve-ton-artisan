@@ -3,7 +3,6 @@ import "./style.css";
 
 const Home = () => {
   const [topArtisans, setTopArtisans] = useState([]);
-  const [filteredArtisans, setFilteredArtisans] = useState([]);
 
   useEffect(() => {
     fetch('/data/artisans.json')
@@ -16,7 +15,6 @@ const Home = () => {
       .then(data => {
         console.log("Données chargées :", data); // Debugging
         setTopArtisans(data);
-        setFilteredArtisans(data);
 
         // Trier les artisans par note et prendre les 3 meilleurs
         const top3 = [...data].sort((a, b) => b.note - a.note).slice(0, 3);

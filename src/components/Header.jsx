@@ -45,7 +45,7 @@ function Header() {
                 <Row className="align-items-center">
                     <Col xs={7} md={5}>
                         <Link to="/">
-                            <img src="/logo.png" alt="Logo" className="img-fluid" />
+                            <img src="/logo.png" alt="Logo" className="cadre1 img-fluid" />
                         </Link>
                     </Col>
                     <Col>
