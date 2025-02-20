@@ -13,15 +13,22 @@ const Home = () => {
         return response.json();
       })
       .then(data => {
-        console.log("Données chargées :", data); // Debugging
-        setTopArtisans(data);
+        console.log("Données des artisans récupérées :", data); // Vérification
+        if (Array.isArray(data)) {
+          const top3 = [...data]
+            .filter(artisan => typeof artisan.note === "number") // Vérifie que 'note' est bien un nombre
+            .sort((a, b) => b.note - a.note)
+            .slice(0, 3);
 
-        // Trier les artisans par note et prendre les 3 meilleurs
-        const top3 = [...data].sort((a, b) => b.note - a.note).slice(0, 3);
-        setTopArtisans(top3);
+          setTopArtisans(top3);
+          console.log("Top 3 artisans :", top3); // Vérification
+        } else {
+          console.error("Les données ne sont pas un tableau :", data);
+        }
       })
       .catch((error) => console.error("Erreur de chargement : ", error));
   }, []);
+
   
   return (
     <div className="home-container">
