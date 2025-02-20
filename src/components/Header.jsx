@@ -8,16 +8,16 @@ function Header() {
     const [searchQuery, setSearchQuery] = useState(""); // Stock la recherche
     const [filteredArtisans, setFilteredArtisans] = useState([]); // Stock les résultats filtrés
     const navigate = useNavigate();
-    useEffect(() => {
-        fetch(process.env.PUBLIC_URL + '/data/artisans.json')
-            .then(response => response.json())
-            .then(data => {
-                console.log("Données chargées :", data);
-                setArtisans(data);
-                setFilteredArtisans(data);
-            })    
-            .catch((error) => console.error("Erreur de chargement : ", error));
-    }, []);
+        useEffect(() => {
+            fetch(process.env.PUBLIC_URL + '/data/artisans.json')
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Données chargées :", data); // Vérifier si les artisans sont bien récupérés
+                    setArtisans(data);
+                    setFilteredArtisans(data);
+                })    
+                .catch((error) => console.error("Erreur de chargement : ", error));
+        }, []);
 
     const handleSearchChange = (e) => {
         const query = e.target.value.toLowerCase();
@@ -28,7 +28,7 @@ function Header() {
                 field.toLowerCase().includes(query)
             )
         );
-
+        console.log("Résultats filtrés :", filtered); // Vérifier si des artisans sont trouvés
         setFilteredArtisans(filtered);
     };
 
@@ -52,7 +52,7 @@ function Header() {
                         <Form className="search-bar d-flex" onSubmit={handleSearchSubmit}>
                             <FormControl
                                 type="text"
-                                placeholder="Rechercher un artisan..."
+                                placeholder="Rechercher..."
                                 value={searchQuery}
                                 onChange={handleSearchChange}
                             />
